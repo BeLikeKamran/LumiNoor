@@ -34,7 +34,7 @@ Soft, comfort-fit colored contact lenses — natural and vivid tones, delivered 
 
 | | |
 |---|---|
-| 🛍️ Shop | [belikekamran.github.io/LumiNoor](https://belikekamran.github.io/LumiNoor/) |
+| 🛍️ Shop | [LumiNoor](https://belikekamran.github.io/LumiNoor/) |
 | 💬 WhatsApp | [Chat with us](https://wa.me/923372110771) |
 | 📘 Facebook | [LumiNoor](https://facebook.com/YoursOwnLuminoor) |
 | 📸 Instagram | [LumiNoor](https://instagram.com/your_own_luminoor) |
