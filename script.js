@@ -34,7 +34,11 @@ function buildWhatsAppLink(message) {
 
 // Message used for a specific product's "Buy on WhatsApp" button.
 function productMessage(product) {
-  return `Hi LumiNoor! I'd like to order ${product.name} (Rs.${product.sale}). Is it in stock?`;
+  // Builds a direct link to this product's card on the live site,
+  // e.g. https://yourname.github.io/luminoor/#doll-blue
+  const productUrl = `${window.location.origin}${window.location.pathname}#${product.id}`;
+
+  return `Hi LumiNoor! I'd like to order ${product.name} (Rs.${product.sale}). Is it in stock?\n${productUrl}`;
 }
 
 // Generic message used by the header icon and the footer "Contact us" /
@@ -156,7 +160,7 @@ function swatchStyle([light, deep]) {
 // handler (delegated on #grid, see below) can look the product back up.
 function cardHTML(p) {
   return `
-    <article class="card" data-id="${p.id}" data-color="${p.color}" data-name="${p.name.toLowerCase()}">
+    <article class="card" id="${p.id}" data-id="${p.id}" data-color="${p.color}" data-name="${p.name.toLowerCase()}">
       <div class="card-media">
         <span class="badge-sale">Sale</span>
         <img src="${p.image}" alt="${p.name} colored contact lens" loading="lazy">
