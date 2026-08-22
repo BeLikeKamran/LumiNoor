@@ -1,78 +1,44 @@
+<div align="center">
+
 # LumiNoor
 
-A single-page storefront for colored contact lenses, built with plain HTML/CSS/JS
-— no build step, no dependencies to install. Customers browse the grid, filter
-by shade, and "Buy on WhatsApp" opens a pre-filled WhatsApp chat instead of a
-traditional checkout.
+**Eyes that hold the light, in every shade of you**
 
-## File structure
+Soft, comfort-fit colored contact lenses — natural and vivid tones, delivered across Pakistan.
 
-```
-.
-├── index.html      # page structure, links style.css and script.js
-├── style.css       # all styling (colors, layout, responsive rules)
-├── script.js       # product data + filtering/search + WhatsApp buy flow
-└── assets/         # product photos referenced by script.js
-```
+<img src="assets/DollBlue.jpg" alt="LumiNoor colored contact lens" width="480">
 
-## Running it locally
+### 🛍️ [Shop the Collection](https://belikekamran.github.io/LumiNoor/)
 
-This is a static site — no npm install, no server required. Either:
+<br>
 
-- Double-click `index.html` to open it directly in a browser, **or**
-- Serve it locally (recommended, avoids browser file:// restrictions):
-  ```bash
-  python3 -m http.server 8000
-  # then open http://localhost:8000
-  ```
 
-## Before you publish: set your WhatsApp number
 
-Open `script.js` and edit this line near the top:
+[![Order on WhatsApp](https://img.shields.io/badge/WhatsApp-Order%20Now-25D364?style=for-the-badge&logo=whatsapp&logoColor=green)](https://wa.me/923372110771)
+[![Follow on Facebook](https://img.shields.io/badge/Facebook-Follow%20Us-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/YoursOwnLuminoor)
+[![Follow on Instagram](https://img.shields.io/badge/Instagram-Follow%20Us-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/your_own_luminoor)
 
-```js
-const WHATSAPP_NUMBER = "923001234567"; // TODO: replace with your real number
-```
+</div>
 
-It must be **digits only, international format** — country code + number, no
-`+`, no spaces, no leading `0`. Example: a Pakistani number `0300 1234567`
-becomes `"923001234567"`.
+---
 
-## Deploying with GitHub Pages
+## Why LumiNoor
 
-1. Create a new repository on GitHub and push this folder to it (see
-   **Pushing to a new repo** below).
-2. In the repo, go to **Settings → Pages**.
-3. Under **Build and deployment → Source**, choose **Deploy from a branch**.
-4. Under **Branch**, choose `main` and folder `/ (root)`, then **Save**.
-5. GitHub gives you a live URL a minute or two later, usually
-   `https://<your-username>.github.io/<repo-name>/`.
+- 💧 **Soft, comfort-fit lenses** — made for everyday wear, not just special occasions
+- 🎨 **Premium shades** across grey, brown, and many more
+- 💬 **Order over WhatsApp** — no account, no checkout form, just chat and confirm
+- 🚚 **Free delivery** across Pakistan on orders over Rs.5,000
+- 📦 **1-year shelf life**, sealed and sterile in every box
 
-No workflow file or Actions setup is needed — GitHub serves the static files
-directly from the branch.
+## Get in touch
 
-## Pushing to a new repo
+| | |
+|---|---|
+| 🛍️ Shop | [belikekamran.github.io/LumiNoor](https://belikekamran.github.io/LumiNoor/) |
+| 💬 WhatsApp | [Chat with us](https://wa.me/923372110771) |
+| 📘 Facebook | [@YOUR-FACEBOOK-PAGE](https://facebook.com/YoursOwnLuminoor) |
+| 📸 Instagram | [@YOUR-INSTAGRAM-HANDLE](https://instagram.com/your_own_luminoor) |
 
-From inside this folder:
-
-```bash
-git init
-git add .
-git commit -m "Initial commit — LumiNoor storefront"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<repo-name>.git
-git push -u origin main
-```
-
-(Create the empty repo on GitHub first, without a README/.gitignore, so there's
-no history to merge with.)
-
-## Customizing
-
-- **Brand colors** — edit the `:root` variables at the top of `style.css`
-  (`--bg` and `--fg` are the two brand colors the site was built around).
-- **Products** — edit the `PRODUCTS` array in `script.js`. Each entry needs an
-  `image` path (drop new photos in `assets/`), a `color` category for the
-  filter pills, and a price.
-- **Copy** — hero text, footer links, and trust-strip copy are plain text in
-  `index.html`.
+<div align="center">
+<sub>© 2026 LumiNoor · Karachi, Pakistan</sub>
+</div>
