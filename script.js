@@ -138,7 +138,7 @@ const PRODUCTS = [
   {
     id: "chocolate-doll-brown",
     name: "Chocolate Doll Brown",
-    image: "assets/Chocolate Doll Brown.jpg",
+    image: "assets/ChocolateDollBrown.jpg",
     color: "brown",
     swatch: ["#B07E4C", "#4A2C14"],
     price: 1499,
