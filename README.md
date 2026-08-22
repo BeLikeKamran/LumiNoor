@@ -1,6 +1,6 @@
 <div align="center">
 
-# <h1> LumiNoor </h1>
+# LumiNoor
 
 **Eyes that hold the light, in every shade of you**
 
