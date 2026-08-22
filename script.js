@@ -46,7 +46,7 @@ function siteBaseUrl() {
 // WhatsApp preview shows THAT lens's photo, not a generic site preview.
 function productMessage(product) {
   const productUrl = `${siteBaseUrl()}products/${product.id}.html`;
-  return `${productUrl} \n Hi LumiNoor! I'd like to order ${product.name} (Rs.${product.sale}). Is it in stock?`;
+  return `Hi LumiNoor! I'd like to order ${product.name} (Rs.${product.sale}). Is it in stock? \n\n${productUrl}`;
 }
 
 // Generic message used by the header icon and the footer "Contact us" /
