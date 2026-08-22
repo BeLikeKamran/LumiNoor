@@ -32,13 +32,21 @@ function buildWhatsAppLink(message) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
 }
 
-// Message used for a specific product's "Buy on WhatsApp" button.
-function productMessage(product) {
-  // Builds a direct link to this product's card on the live site,
-  // e.g. https://yourname.github.io/luminoor/#doll-blue
-  const productUrl = `${window.location.origin}${window.location.pathname}#${product.id}`;
+// Works out the folder containing index.html, so links are correct
+// whether the site lives at the root of your domain or in a GitHub
+// Pages project subfolder like /luminoor/.
+function siteBaseUrl() {
+  const path = window.location.pathname.replace(/index\.html$/, '');
+  const normalized = path.endsWith('/') ? path : path + '/';
+  return `${window.location.origin}${normalized}`;
+}
 
-  return `Hi LumiNoor! I'd like to order ${product.name} (Rs.${product.sale}). Is it in stock?\n${productUrl}`;
+// Message used for a specific product's "Buy on WhatsApp" button.
+// Links to that product's own redirect page (products/<id>.html) so the
+// WhatsApp preview shows THAT lens's photo, not a generic site preview.
+function productMessage(product) {
+  const productUrl = `${siteBaseUrl()}products/${product.id}.html`;
+  return `${productUrl} \n Hi LumiNoor! I'd like to order ${product.name} (Rs.${product.sale}). Is it in stock?`;
 }
 
 // Generic message used by the header icon and the footer "Contact us" /
