@@ -21,7 +21,7 @@ Soft, comfort-fit colored contact lenses — natural and vivid tones, delivered 
 </div>
 
 ---
-
+<div align="center">
 ## Why LumiNoor
 
 - 💧 **Soft, comfort-fit lenses** — made for everyday wear, not just special occasions
@@ -39,6 +39,6 @@ Soft, comfort-fit colored contact lenses — natural and vivid tones, delivered 
 | 📘 Facebook | [LumiNoor](https://facebook.com/YoursOwnLuminoor) |
 | 📸 Instagram | [LumiNoor](https://instagram.com/your_own_luminoor) |
 
-<div align="center">
+
 <sub>© 2026 LumiNoor · Karachi, Pakistan</sub>
 </div>
