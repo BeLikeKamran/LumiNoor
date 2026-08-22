@@ -21,17 +21,17 @@ Soft, comfort-fit colored contact lenses — natural and vivid tones, delivered 
 </div>
 
 ---
-<div align="center">
 ## Why LumiNoor
 
-- 💧 **Soft, comfort-fit lenses** — made for everyday wear, not just special occasions
-- 🎨 **Premium shades** across grey, brown, and many more
-- 💬 **Order over WhatsApp** — no account, no checkout form, just chat and confirm
-- 🚚 **Free delivery** across Pakistan on orders over Rs.5,000
-- 📦 **1-year shelf life**, sealed and sterile in every box
+ 💧 **Soft, comfort-fit lenses** — made for everyday wear, not just special occasions
+ 🎨 **Premium shades** across grey, brown, and many more
+ 💬 **Order over WhatsApp** — no account, no checkout form, just chat and confirm
+ 🚚 **Free delivery** across Pakistan on orders over Rs.5,000
+ 📦 **1-year shelf life**, sealed and sterile in every box
 
 ## Get in touch
 
+<div align="center">
 | | |
 |---|---|
 | 🛍️ Shop | [LumiNoor](https://belikekamran.github.io/LumiNoor/) |
