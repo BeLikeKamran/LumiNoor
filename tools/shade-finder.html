@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shade Finder — LumiNoor</title>
+  <meta name="description" content="Answer two quick questions and find the LumiNoor lens shade that fits your look.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="topbar">Cash on Delivery · Free delivery across Pakistan on orders over Rs.5,000</div>
+
+  <header>
+    <div class="wrap header-row">
+      <a href="../index.html" class="logo">
+        <img src="../assets/luminoorlogo.svg" class="mark" alt="LumiNoor logo">
+        LumiNoor
+      </a>
+      <div class="header-actions">
+        <a href="../index.html" class="icon-btn finder-back" aria-label="Back to shop">← All shades</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="finder-wrap">
+    <div class="finder-header">
+      <p class="eyebrow">Shade Finder</p>
+      <h1 class="display">Find your shade</h1>
+      <p>Three quick questions — we'll point you to shades that fit your look.</p>
+    </div>
+
+    <div class="finder-combined-card">
+      <div class="finder-quiz-layout">
+        <section class="finder-result" id="finderResult" aria-live="polite">
+        <p id="finderResultLabel" class="step-label" hidden>Your final match</p>
+        <div class="finder-result-media">
+          <span id="finderResultBadge" class="badge-sale" hidden>Sale</span>
+          <div id="finderResultShimmer" class="finder-result-shimmer" aria-label="Waiting for your choices">
+            <img id="finderPreviewImage" src="../assets/DollBrown.jpg" alt="Preview of a possible shade" loading="lazy">
+          </div>
+          <img id="finderResultImage" src="" alt="" loading="lazy" hidden>
+          <div id="finderResultSwatch" class="swatch" hidden></div>
+        </div>
+        <h2 class="display finder-result-name" id="finderResultName"></h2>
+        <div class="price-row finder-result-price-row">
+          <span class="was" id="finderResultOldPrice"></span>
+          <span class="now" id="finderResultPrice"></span>
+        </div>
+        <a id="finderResultBuy" class="finder-result-buy" href="#" hidden>Buy on WhatsApp</a>
+        </section>
+
+        <section class="quiz-page-card" aria-label="Choose your lens preferences">
+        <div class="quiz-progress" aria-label="Quiz progress">
+          <span class="quiz-progress-bar" id="quizProgressBar"></span>
+        </div>
+
+        <div class="quiz-question active" data-step="1">
+          <p class="step-label">Question 1 of 3</p>
+          <h3 class="display">What's your skin tone?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option" data-skin-tone="fair" type="button">Fair</button>
+            <button class="quiz-option" data-skin-tone="wheatish" type="button">Wheatish</button>
+            <button class="quiz-option" data-skin-tone="deep" type="button">Deep / Dusky</button>
+          </div>
+        </div>
+
+        <div class="quiz-question" data-step="2">
+          <p class="step-label">Question 2 of 3</p>
+          <h3 class="display">What are these for?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option" data-occasion="daily" type="button">Daily / Office</button>
+            <button class="quiz-option" data-occasion="mehndi" type="button">Mehndi</button>
+            <button class="quiz-option" data-occasion="baraat" type="button">Baraat</button>
+            <button class="quiz-option" data-occasion="walima" type="button">Walima</button>
+            <button class="quiz-option" data-occasion="casual" type="button">Casual</button>
+            <button class="quiz-option" data-occasion="photoshoot" type="button">Photoshoot</button>
+          </div>
+          <button class="quiz-back" data-back-to="1" type="button">← Back</button>
+        </div>
+
+        <div class="quiz-question" data-step="3">
+          <p class="step-label">Question 3 of 3</p>
+          <h3 class="display">How big a change do you want?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option" data-drama="subtle" type="button">Subtle</button>
+            <button class="quiz-option" data-drama="noticeable" type="button">Noticeable</button>
+            <button class="quiz-option" data-drama="dramatic" type="button">Dramatic</button>
+          </div>
+          <button class="quiz-back" data-back-to="2" type="button">← Back</button>
+        </div>
+        </section>
+      </div>
+    </div>
+
+    <section class="finder-products" aria-live="polite">
+      <div class="finder-products-heading">
+        <h2 class="display">Shades for your choices</h2>
+        <span id="finderProductCount"></span>
+      </div>
+      <div class="finder-product-grid" id="finderProductGrid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap bottom-bar">
+      <span>© 2026 LumiNoor. All rights reserved.</span>
+      <span>Karachi, Pakistan</span>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
