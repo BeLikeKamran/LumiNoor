@@ -250,6 +250,16 @@ nav.main-nav a.active::after {
   nav.main-nav {
     display: none;
   }
+
+  .search-field.open {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    width: auto;
+    max-width: none;
+    z-index: 100;
+  }
 }
 
 @media (max-width:400px) {
@@ -268,14 +278,6 @@ nav.main-nav a.active::after {
     display: none;
   }
 
-  .search-field.open {
-    position: absolute;
-    left: 16px;
-    right: 16px;
-    top: 20px;
-    width: auto;
-    z-index: 3;
-  }
 }
 
 /* ---------- Hero ---------- */
