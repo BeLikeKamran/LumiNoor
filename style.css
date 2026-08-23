@@ -222,20 +222,19 @@ nav.main-nav a.active::after {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity .2s ease;
 }
 
 .search-field.open {
   position: absolute;
   top: calc(100% + 8px);
-  left: 0;
-  right: 0;
-  width: auto;
-  max-width: none;
+  left: 50%;
+  right: auto;
+  width: min(520px, calc(100% - 32px));
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
   z-index: 100;
+  transform: translateX(-50%);
 }
 
 .search-field input {
@@ -259,6 +258,13 @@ nav.main-nav a.active::after {
 @media (max-width:860px) {
   nav.main-nav {
     display: none;
+  }
+
+  .search-field.open {
+    left: 8px;
+    right: 8px;
+    width: auto;
+    transform: none;
   }
 }
 
