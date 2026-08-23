@@ -252,6 +252,22 @@ nav.main-nav a.active::after {
   }
 }
 
+@media (max-width:400px) {
+  .header-row {
+    gap: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .header-actions {
+    gap: 4px;
+  }
+
+  .header-actions > .icon-btn[aria-label="Account"] {
+    display: none;
+  }
+}
+
 /* ---------- Hero ---------- */
 .hero {
   padding: 64px 0 40px;
@@ -736,6 +752,10 @@ footer {
   margin-bottom: 24px;
 }
 
+.footer-grid > * {
+  min-width: 0;
+}
+
 @media (max-width:760px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
@@ -773,6 +793,7 @@ footer {
 
 .newsletter input {
   flex: 1;
+  min-width: 0;
   border: none;
   outline: none;
   background: none;
