@@ -220,12 +220,22 @@ nav.main-nav a.active::after {
   width: 0;
   overflow: hidden;
   opacity: 0;
-  transition: width .28s ease, opacity .2s ease, padding .28s ease;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .2s ease;
 }
 
 .search-field.open {
-  width: 220px;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  width: auto;
+  max-width: none;
   opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  z-index: 100;
 }
 
 .search-field input {
@@ -247,27 +257,14 @@ nav.main-nav a.active::after {
 }
 
 @media (max-width:860px) {
-  .header-row {
-    position: relative;
-  }
-
   nav.main-nav {
     display: none;
-  }
-
-  .search-field.open {
-    position: absolute;
-    top: calc(100% + 8px);
-    left: 8px;
-    right: 8px;
-    width: auto;
-    max-width: none;
-    z-index: 100;
   }
 }
 
 @media (max-width:400px) {
   .header-row {
+    position: relative;
     gap: 8px;
     padding-left: 16px;
     padding-right: 16px;
