@@ -101,6 +101,7 @@ header {
   justify-content: space-between;
   padding: 20px 0;
   gap: 24px;
+  position: relative;
 }
 
 .logo {
@@ -270,7 +271,6 @@ nav.main-nav a.active::after {
 
 @media (max-width:400px) {
   .header-row {
-    position: relative;
     gap: 8px;
     padding-left: 16px;
     padding-right: 16px;
