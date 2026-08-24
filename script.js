@@ -275,11 +275,6 @@ if (calcPrice && calcDays && calcResult) {
   updateCalc();
 }
 
-const newsletterForm = document.getElementById("newsletterForm");
-if (newsletterForm) {
-  newsletterForm.addEventListener("submit", (event) => event.preventDefault());
-}
-
 /* ============================ PRODUCT REDIRECTS ============================
    Preview pages are opened by link crawlers, then send real visitors back to
    the matching product on the homepage.
