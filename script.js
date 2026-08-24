@@ -36,7 +36,7 @@ function siteBaseUrl() {
 // preview shows THAT lens's photo, not a generic site preview.
 function productMessage(product) {
   const productUrl = `${siteBaseUrl()}products/${product.id}.html`;
-  return `Hi LumiNoor! I'd like to order ${product.name} (Rs.${product.sale}). Is it in stock? \n \n ${productUrl}`;
+  return `Hi LumiNoor! I'd like to order ${product.name} (Rs.${product.sale}). Is it in stock?\n\n${productUrl}`;
 }
 
 const GENERAL_MESSAGE = "Hi LumiNoor! I have a question about your lenses.";
