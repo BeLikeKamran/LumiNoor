@@ -8,7 +8,7 @@ Soft, comfort-fit colored contact lenses — natural and vivid tones, delivered 
 
 <img src="assets/DollBlue.jpg" alt="LumiNoor colored contact lens" width="480">
 
-### 🛍️ [Shop the Collection](https://LumiNoor.github.io/LumiNoor/)
+### 🛍️ [Shop the Collection](https://luminoor.github.io/luminoor/)
 
 <br>
 
@@ -35,7 +35,7 @@ Soft, comfort-fit colored contact lenses — natural and vivid tones, delivered 
 
 | | |
 |---|---|
-| 🛍️ Shop | [LumiNoor](https://LumiNoor.github.io/LumiNoor/) |
+| 🛍️ Shop | [LumiNoor](https://luminoor.github.io/luminoor/) |
 | 💬 WhatsApp | [Chat with us](https://wa.me/923372110771) |
 | 📘 Facebook | [LumiNoor](https://facebook.com/YoursOwnLuminoor) |
 | 📸 Instagram | [LumiNoor](https://instagram.com/your_own_luminoor) |
