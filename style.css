@@ -505,32 +505,32 @@ nav.main-nav a.active::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(255,255,255,.08), rgba(255,255,255,.02)),
-    radial-gradient(rgba(255,255,255,.4) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(255,255,255,.18), rgba(255,255,255,.02)),
+    radial-gradient(rgba(255,255,255,.35) 1px, transparent 1px);
   background-size: auto, 18px 18px;
   background-position: center;
-  opacity: .55;
+  opacity: .35;
   pointer-events: none;
 }
 
 .grey-card {
-  background: linear-gradient(180deg, #f2eee9 0%, #e5e0dc 100%);
+  background: linear-gradient(180deg, rgba(242,238,233,.9) 0%, rgba(255,255,255,.9) 100%);
 }
 
 .green-card {
-  background: linear-gradient(180deg, #edf2df 0%, #dfe8d1 100%);
+  background: linear-gradient(180deg, rgba(237,242,223,.9) 0%, rgba(255,255,255,.9) 100%);
 }
 
 .brown-card {
-  background: linear-gradient(180deg, #f3e7dc 0%, #ead6bf 100%);
+  background: linear-gradient(180deg, rgba(243,231,220,.92) 0%, rgba(255,255,255,.9) 100%);
 }
 
 .blue-card {
-  background: linear-gradient(180deg, #e8f1fb 0%, #d5e6f8 100%);
+  background: linear-gradient(180deg, rgba(232,241,251,.92) 0%, rgba(255,255,255,.9) 100%);
 }
 
 .black-card {
-  background: linear-gradient(180deg, #eceae9 0%, #d9d6d4 100%);
+  background: linear-gradient(180deg, rgba(236,234,233,.9) 0%, rgba(255,255,255,.9) 100%);
 }
 
 .featured-color-topbar,
@@ -586,17 +586,17 @@ nav.main-nav a.active::after {
 
 .featured-kicker {
   font-family: 'Fraunces', serif;
-  font-size: clamp(2.1rem, 4vw, 3.4rem);
+  font-size: clamp(1rem, 1.6vw, 1.5rem);
   font-weight: 600;
   color: rgba(42,29,27,.9);
 }
 
 .featured-sub {
   font-family: 'Fraunces', serif;
-  font-size: clamp(1.2rem, 2.2vw, 2rem);
+  font-size: clamp(.75rem, 1.1vw, 1rem);
   font-style: italic;
   color: rgba(42,29,27,.7);
-  margin-top: -4px;
+  margin-top: -2px;
 }
 
 .green-headline .featured-kicker,
@@ -605,19 +605,26 @@ nav.main-nav a.active::after {
 }
 
 .featured-lens-stage {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 0 14px;
-  min-height: 210px;
-  width: 100%;
+  margin: 0 auto 14px;
+  width: 220px;
+  height: 220px;
+  max-width: 100%;
+  min-height: 0;
 }
 
 .featured-lens-stage img {
+  position: absolute;
+  inset: 0;
+  display: block;
   width: 100%;
   max-width: 100%;
-  height: 210px;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
   border-radius: 18px;
   background: #f0ece7;
   border: 7px solid rgba(255,255,255,.78);
@@ -659,21 +666,29 @@ nav.main-nav a.active::after {
 
 .featured-color-footer h3 {
   font-family: 'Fraunces', serif;
-  font-size: clamp(1.3rem, 1.6vw, 1.8rem);
+  font-size: .8rem;
   font-weight: 600;
   color: rgba(42,29,27,.92);
 }
 
 .featured-color-btn {
-  padding: 10px 14px;
+  padding: 8px 10px;
   border-radius: 999px;
   border: 1px solid rgba(42,29,27,.18);
   background: rgba(255,255,255,.24);
   color: rgba(42,29,27,.8);
-  font-size: 9px;
+  font-size: 8px;
   letter-spacing: .08em;
   text-transform: uppercase;
   font-weight: 800;
+  transition: background .2s ease, border-color .2s ease, color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.featured-color-card.active .featured-color-btn {
+  background: rgba(42,29,27,.9);
+  border-color: rgba(42,29,27,.9);
+  color: #fff;
+  box-shadow: 0 8px 20px -12px rgba(42,29,27,.8);
 }
 
 @media (max-width: 1180px) {
@@ -698,11 +713,12 @@ nav.main-nav a.active::after {
   }
 
   .featured-lens-stage {
-    min-height: 130px;
+    width: 180px;
+    height: 180px;
+    min-height: 0;
   }
 
   .featured-lens-stage img {
-    height: 130px;
     border-width: 5px;
   }
 }
@@ -746,12 +762,10 @@ nav.main-nav a.active::after {
   }
 
   .featured-lens-stage {
-    min-height: 150px;
     margin-bottom: 10px;
   }
 
   .featured-lens-stage img {
-    height: 150px;
     border-width: 5px;
     border-radius: 14px;
   }
@@ -779,14 +793,6 @@ nav.main-nav a.active::after {
 @media (max-width: 500px) {
   .featured-color-card {
     min-height: 360px;
-  }
-
-  .featured-lens-stage {
-    min-height: 138px;
-  }
-
-  .featured-lens-stage img {
-    height: 138px;
   }
 }
 
