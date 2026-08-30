@@ -49,7 +49,7 @@ const TRACK_ORDER_MESSAGE = "Hi LumiNoor! Could you help me track my order?";
 //              hand-picked to match the lens tone in that product's photo
   color  -> color family used by the shade finder
   ========================================================================== */
-const PRODUCTS = [
+const KOREAN_PRODUCTS = [
   {
     id: "greyhoney",
     name: "Grey Honey",
@@ -223,6 +223,74 @@ const PRODUCTS = [
   },
 ];
 
+const DAHAB_PRODUCTS = [
+  {
+    id: "alaska",
+    name: "Alaska",
+    image: "Shades/alaska.png",
+    color: "blue",
+    swatch: ["#B0D8E9", "#3C7FA1"],
+    price: 1499,
+    sale: 999,
+  },
+  {
+    id: "hawaii",
+    name: "Hawaii",
+    image: "Shades/hawaii.png",
+    color: "green",
+    swatch: ["#B5D9B0", "#557A52"],
+    price: 1499,
+    sale: 999,
+  },
+  {
+    id: "khaki",
+    name: "Khaki",
+    image: "Shades/khaki.png",
+    color: "brown",
+    swatch: ["#B5A16D", "#5E4E2B"],
+    price: 1499,
+    sale: 999,
+  },
+  {
+    id: "mentha",
+    name: "Mentha",
+    image: "Shades/mentha.png",
+    color: "green",
+    swatch: ["#B7E6D8", "#4E8A77"],
+    price: 1499,
+    sale: 999,
+  },
+  {
+    id: "olive",
+    name: "Olive",
+    image: "Shades/olive.png",
+    color: "green",
+    swatch: ["#B8B77A", "#5F6932"],
+    price: 1499,
+    sale: 999,
+  },
+  {
+    id: "perle",
+    name: "Perle",
+    image: "Shades/perle.png",
+    color: "grey",
+    swatch: ["#D7D0CA", "#6F6B69"],
+    price: 1499,
+    sale: 999,
+  },
+  {
+    id: "rain",
+    name: "Rain",
+    image: "Shades/rain.png",
+    color: "grey",
+    swatch: ["#C9CEDA", "#5C6473"],
+    price: 1499,
+    sale: 999,
+  },
+];
+
+const PRODUCTS = [...KOREAN_PRODUCTS, ...DAHAB_PRODUCTS];
+
 /* ================================ RENDERING ================================ */
 
 function cardHTML(p) {
@@ -247,6 +315,7 @@ function cardHTML(p) {
 }
 
 const grid = document.getElementById("grid");
+const dahabGrid = document.getElementById("grid-dahab");
 const emptyState = document.getElementById("emptyState");
 const resultsCount = document.getElementById("resultsCount");
 const resultsTitle = document.getElementById("resultsTitle");
@@ -262,12 +331,21 @@ function buildNavigation() {
 }
 
 function renderGrid() {
-  grid.innerHTML = PRODUCTS.map(cardHTML).join("");
+  if (grid) {
+    grid.innerHTML = KOREAN_PRODUCTS.map(cardHTML).join("");
+  }
 }
 
-if (grid) {
+function renderDahabGrid() {
+  if (dahabGrid) {
+    dahabGrid.innerHTML = DAHAB_PRODUCTS.map(cardHTML).join("");
+  }
+}
+
+if (grid || dahabGrid) {
   buildNavigation();
   renderGrid();
+  renderDahabGrid();
 }
 
 /* ================================ FILTER + SEARCH ================================ */
@@ -276,8 +354,7 @@ let query = "";
 let activeColor = "all";
 
 function formatColorTitle(color) {
-  if (!color || color === "all") return "All lenses";
-  return `${color.charAt(0).toUpperCase()}${color.slice(1)} lenses`;
+  return "Korean lenses";
 }
 
 function updateResultsTitle() {
