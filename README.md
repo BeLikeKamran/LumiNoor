@@ -6,7 +6,7 @@
 
 Soft, comfort-fit colored contact lenses — natural and vivid tones, delivered across Pakistan.
 
-<img src="assets/DollBlue.jpg" alt="LumiNoor colored contact lens" width="480">
+<img src="Shades/DollBlue.jpg" alt="LumiNoor colored contact lens" width="480">
 
 ### 🛍️ [Shop the Collection](https://luminoor.github.io/luminoor/)
 

@@ -53,7 +53,7 @@ const PRODUCTS = [
   {
     id: "greyhoney",
     name: "Grey Honey",
-    image: "assets/GreyHoney.jpg",
+    image: "Shades/GreyHoney.jpg",
     color: "grey",
     swatch: ["#D9C9A6", "#8A7550"],
     price: 1499,
@@ -62,7 +62,7 @@ const PRODUCTS = [
   {
     id: "greybrown",
     name: "Grey Brown",
-    image: "assets/GreyBrown.jpg",
+    image: "Shades/GreyBrown.jpg",
     color: "grey",
     swatch: ["#9C9C96", "#46433F"],
     price: 1499,
@@ -71,7 +71,7 @@ const PRODUCTS = [
   {
     id: "dollshadowglittergrey",
     name: "Doll Shadow Glitter Grey",
-    image: "assets/DollShadowGlitterGrey.jpg",
+    image: "Shades/DollShadowGlitterGrey.jpg",
     color: "grey",
     swatch: ["#A6A7A9", "#3D3E40"],
     price: 1499,
@@ -80,7 +80,7 @@ const PRODUCTS = [
   {
     id: "dollgreen",
     name: "Doll Green",
-    image: "assets/DollGreen.jpg",
+    image: "Shades/DollGreen.jpg",
     color: "green",
     swatch: ["#AFCBAC", "#4E7A5B"],
     price: 1499,
@@ -89,7 +89,7 @@ const PRODUCTS = [
   {
     id: "dollglittergrey",
     name: "Doll Glitter Grey",
-    image: "assets/DollGlitterGrey.jpg",
+    image: "Shades/DollGlitterGrey.jpg",
     color: "grey",
     swatch: ["#A2A3A5", "#403F41"],
     price: 1499,
@@ -98,7 +98,7 @@ const PRODUCTS = [
   {
     id: "dollbrown",
     name: "Doll Brown",
-    image: "assets/DollBrown.jpg",
+    image: "Shades/DollBrown.jpg",
     color: "brown",
     swatch: ["#C79A63", "#5C3A1E"],
     price: 1499,
@@ -107,7 +107,7 @@ const PRODUCTS = [
   {
     id: "dollblue",
     name: "Doll Blue",
-    image: "assets/DollBlue.jpg",
+    image: "Shades/DollBlue.jpg",
     color: "blue",
     swatch: ["#93BEDD", "#2C5A82"],
     price: 1499,
@@ -116,7 +116,7 @@ const PRODUCTS = [
   {
     id: "dollblackkorean",
     name: "Doll Black Korean",
-    image: "assets/DollBlackKorean.jpg",
+    image: "Shades/DollBlackKorean.jpg",
     color: "black",
     swatch: ["#75757A", "#1C1C1E"],
     price: 1499,
@@ -125,9 +125,99 @@ const PRODUCTS = [
   {
     id: "chocolatedollbrown",
     name: "Chocolate Doll Brown",
-    image: "assets/ChocolateDollBrown.jpg",
+    image: "Shades/ChocolateDollBrown.jpg",
     color: "brown",
     swatch: ["#B07E4C", "#4A2C14"],
+    price: 1499,
+    sale: 999,
+  },
+  {
+    id: "sydneygreen",
+    name: "Sydney Green",
+    image: "Shades/SydneyGreen.jpg",
+    color: "green",
+    swatch: ["#A7C4AA", "#446B5E"],
+    price: 1499,
+    sale: 999,
+  },
+  {
+    id: "russianblue",
+    name: "Russian Blue",
+    image: "Shades/RussianBlue.jpg",
+    color: "blue",
+    swatch: ["#90A9D5", "#2D4F7F"],
+    price: 1499,
+    sale: 999,
+  },
+  {
+    id: "miragegreen",
+    name: "Mirage Green",
+    image: "Shades/MirageGreen.jpg",
+    color: "green",
+    swatch: ["#B9D2B4", "#4E765B"],
+    price: 1499,
+    sale: 999,
+  },
+  {
+    id: "emberrose",
+    name: "Ember Rose",
+    image: "Shades/EmberRose.jpg",
+    color: "brown",
+    swatch: ["#D69E9A", "#7A4B3F"],
+    price: 1499,
+    sale: 999,
+  },
+  {
+    id: "diamondgray",
+    name: "Diamond Gray",
+    image: "Shades/DiamondGray.jpg",
+    color: "grey",
+    swatch: ["#D3D3D5", "#59616A"],
+    price: 1499,
+    sale: 999,
+  },
+  {
+    id: "diamondbrown",
+    name: "Diamond Brown",
+    image: "Shades/DiamondBrown.jpg",
+    color: "brown",
+    swatch: ["#CFA67A", "#5B3822"],
+    price: 1499,
+    sale: 999,
+  },
+  {
+    id: "diamondblue",
+    name: "Diamond Blue",
+    image: "Shades/DiamondBlue.jpg",
+    color: "blue",
+    swatch: ["#9BB9D8", "#2D5F8A"],
+    price: 1499,
+    sale: 999,
+  },
+  {
+    id: "dnabrown",
+    name: "DNA Brown",
+    image: "Shades/DNABrown.jpg",
+    color: "brown",
+    swatch: ["#C49768", "#4B2C14"],
+    price: 1499,
+    sale: 999,
+  },
+  {
+    id: "anglegrey",
+    name: "Angel Grey",
+    image: "Shades/AngelGrey.jpg",
+    color: "grey",
+    swatch: ["#D0D0D3", "#5D6069"],
+    price: 1499,
+    sale: 999,
+  },
+  {
+    id: "auragreen",
+    name: "Aura Green",
+    image: "Shades/AuraGreen.jpg",
+    color: "green",
+    swatch: ["#BED8AF", "#5D7A5C"],
     price: 1499,
     sale: 999,
   },
@@ -137,11 +227,10 @@ const PRODUCTS = [
 
 function cardHTML(p) {
   return `
-    <article class="card" id="${p.id}" data-id="${p.id}" data-name="${p.name.toLowerCase()}">
+    <article class="card" id="${p.id}" data-id="${p.id}" data-name="${p.name.toLowerCase()}" data-color="${p.color}">
       <div class="card-media">
         <span class="badge-sale">Sale</span>
         <img src="${p.image}" alt="${p.name} colored contact lens" loading="lazy">
-        <div class="swatch swatch-${p.id}"></div>
         <button class="buy-btn" data-id="${p.id}">
           <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
           Buy on WhatsApp
@@ -160,6 +249,8 @@ function cardHTML(p) {
 const grid = document.getElementById("grid");
 const emptyState = document.getElementById("emptyState");
 const resultsCount = document.getElementById("resultsCount");
+const resultsTitle = document.getElementById("resultsTitle");
+const filterClear = document.getElementById("filterClear");
 const colorNav = document.getElementById("colorNav");
 
 function buildNavigation() {
@@ -182,17 +273,33 @@ if (grid) {
 /* ================================ FILTER + SEARCH ================================ */
 
 let query = "";
+let activeColor = "all";
+
+function formatColorTitle(color) {
+  if (!color || color === "all") return "All lenses";
+  return `${color.charAt(0).toUpperCase()}${color.slice(1)} lenses`;
+}
+
+function updateResultsTitle() {
+  if (!resultsTitle) return;
+  resultsTitle.textContent = formatColorTitle(activeColor);
+  if (filterClear) {
+    filterClear.classList.toggle("hidden", activeColor === "all");
+  }
+}
 
 function applyFilters() {
   let visible = 0;
   document.querySelectorAll(".card").forEach((card) => {
     const matchesQuery = card.dataset.name.includes(query);
-    const show = matchesQuery;
+    const matchesColor = activeColor === "all" || card.dataset.color === activeColor;
+    const show = matchesQuery && matchesColor;
     card.style.display = show ? "" : "none";
     if (show) visible++;
   });
   resultsCount.textContent = `${visible} style${visible === 1 ? "" : "s"}`;
   emptyState.classList.toggle("show", visible === 0);
+  updateResultsTitle();
 }
 
 const searchToggle = document.getElementById("searchToggle");
@@ -210,6 +317,43 @@ if (searchInput) {
   searchInput.addEventListener("input", (e) => {
     query = e.target.value.trim().toLowerCase();
     applyFilters();
+  });
+}
+
+if (filterClear) {
+  filterClear.addEventListener("click", () => {
+    activeColor = "all";
+    document.querySelectorAll(".featured-color-card").forEach((card) => {
+      card.classList.remove("active");
+    });
+    applyFilters();
+  });
+}
+
+const colorPicks = document.querySelectorAll(".featured-color-card, .color-pick");
+if (colorPicks.length) {
+  colorPicks.forEach((button) => {
+    button.addEventListener("click", () => {
+      const nextColor = button.dataset.color || "all";
+      const shouldDeselect = button.classList.contains("active") || activeColor === nextColor;
+
+      if (shouldDeselect) {
+        activeColor = "all";
+        document.querySelectorAll(".featured-color-card").forEach((card) => {
+          card.classList.remove("active");
+        });
+      } else {
+        activeColor = nextColor;
+        document.querySelectorAll(".featured-color-card").forEach((card) => {
+          card.classList.toggle("active", card.dataset.color === nextColor && nextColor !== "all");
+        });
+      }
+
+      applyFilters();
+      if (activeColor !== "all") {
+        document.getElementById("shop")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
   });
 }
 
