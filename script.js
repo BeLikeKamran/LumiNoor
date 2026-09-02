@@ -453,8 +453,9 @@ function openWhatsApp(message) {
   window.open(buildWhatsAppLink(message), "_blank", "noopener");
 }
 
-if (grid) {
-  grid.addEventListener("click", (e) => {
+function attachBuyButtonListener(gridElement) {
+  if (!gridElement) return;
+  gridElement.addEventListener("click", (e) => {
     const btn = e.target.closest(".buy-btn");
     if (!btn) return;
     const product = PRODUCTS.find((p) => p.id === btn.dataset.id);
@@ -463,6 +464,9 @@ if (grid) {
     openWhatsApp(productMessage(product));
   });
 }
+
+attachBuyButtonListener(grid);
+attachBuyButtonListener(dahabGrid);
 
 const contactLink = document.getElementById("waContactUs");
 const trackOrderLink = document.getElementById("waTrackOrder");
