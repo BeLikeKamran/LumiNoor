@@ -1,339 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LumiNoor — Colored Contact Lenses</title>
-<meta name="description" content="LumiNoor — colored contact lenses. Eyes that catch the light. Order on WhatsApp.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
-<meta name="theme-color" content="#f7d9d0">
 
-<!-- These tags control how the shop preview looks when its link is shared. -->
-<meta property="og:title" content="LumiNoor — Colored Contact Lenses">
-<meta property="og:description" content="Soft, comfort-fit doll lenses in natural and vivid tones — order in a tap, straight over WhatsApp.">
-<meta property="og:image" content="https://luminoor.github.io/luminoor/Shades/DollBlue.jpg">
-<meta property="og:url" content="https://luminoor.github.io/luminoor/">
-<meta property="og:type" content="website">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LumiNoor — Colored Contact Lenses</title>
+  <meta name="description" content="LumiNoor — colored contact lenses. Eyes that catch the light. Order on WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#f7d9d0">
+
+  <!-- These tags control how the shop preview looks when its link is shared. -->
+  <meta property="og:title" content="LumiNoor — Colored Contact Lenses">
+  <meta property="og:description"
+    content="Soft, comfort-fit doll lenses in natural and vivid tones — order in a tap, straight over WhatsApp.">
+  <meta property="og:image" content="https://luminoor.github.io/luminoor/Shades/7-DollBlue.jpg">
+  <meta property="og:url" content="https://luminoor.github.io/luminoor/">
+  <meta property="og:type" content="website">
 </head>
+
 <body>
 
-<div class="topbar">Cash on Delivery Available · Free delivery across Pakistan on orders over Rs.5,000</div>
+  <div class="topbar">Cash on Delivery Available · Free delivery across Pakistan on orders over Rs.5,000</div>
 
-<header>
-  <div class="wrap header-row">
-    <a href="#" class="logo">
-      <img src="assets/luminoorlogo.svg" class="mark" alt="LumiNoor logo">
-      LumiNoor
-    </a>
+  <header>
+    <div class="wrap header-row">
+      <a href="#" class="logo">
+        <img src="assets/luminoorlogo.svg" class="mark" alt="LumiNoor logo">
+        LumiNoor
+      </a>
 
-    <nav class="main-nav" id="colorNav">
-      <!-- Populated by script.js from the product color categories -->
-    </nav>
+      <nav class="main-nav" id="colorNav">
+        <!-- Populated by script.js from the product color categories -->
+      </nav>
 
-    <div class="header-actions">
-      <div class="search-field" id="searchField">
-        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-        <input type="text" id="searchInput" placeholder="Search lenses…">
+      <div class="header-actions">
+        <div class="search-field" id="searchField">
+          <svg viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7" />
+            <path d="M21 21l-4.3-4.3" />
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search lenses…">
+        </div>
+        <button class="icon-btn" id="searchToggle" aria-label="Search">
+          <svg viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7" />
+            <path d="M21 21l-4.3-4.3" />
+          </svg>
+        </button>
+        <a class="whatsapp-header-btn"
+          href="https://wa.me/923372110771?text=Hi%20LumiNoor!%20I%20have%20a%20question%20about%20your%20lenses."
+          target="_blank" rel="noopener" aria-label="Contact LumiNoor on WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3z" />
+            <path
+              d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z" />
+          </svg>
+          <span>Contact WhatsApp</span>
+        </a>
       </div>
-      <button class="icon-btn" id="searchToggle" aria-label="Search">
-        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-      </button>
-      <button class="icon-btn" aria-label="Account">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
-      </button>
-      <a class="icon-btn header-tools-btn" href="#tools" aria-label="Open tools">
-        <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>
-        <span>Tools</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="headerLOGO">
+        <img src="assets/luminoorlogo emblum.svg" alt="LumiNoor logo">
+      </div>
+      <h1 class="display">Every <em>Beauty begins</em> With The Eyes</h1>
+      <p class="eyebrow">Colored contact lenses · Pakistan</p>
+      <p class="display">Eyes that hold <em>the light</em>, in every shade of you</p>
+      <p>Soft, comfort-fit doll lenses in natural and vivid tones — order in a tap, straight over WhatsApp.</p>
+      <a href="#shop" class="hero-cta">
+        Shop the collection
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
       </a>
     </div>
-  </div>
-</header>
+  </section>
 
-<section class="hero">
-  <div class="wrap">
-    <div class="headerLOGO">
-      <img src="assets/luminoorlogo.svg" alt="LumiNoor logo">
-    </div>
-    <h1 class="display">Every <em>Beauty begins</em> With The Eyes</h1>
-    <p class="eyebrow">Colored contact lenses · Pakistan</p>
-    <p class="display">Eyes that hold <em>the light</em>, in every shade of you</p>
-    <p>Soft, comfort-fit doll lenses in natural and vivid tones — order in a tap, straight over WhatsApp.</p>
-    <a href="#shop" class="hero-cta">
-      Shop the collection
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-    </a>
-  </div>
-</section>
+  <section class="tools" id="tools">
+    <div class="wrap">
+      <h2 class="display section-title">Handy tools</h2>
+      <p class="section-sub">Not sure which shade to pick? Start here.</p>
 
-<section class="tools" id="tools">
-  <div class="wrap">
-    <h2 class="display section-title">Handy tools</h2>
-    <p class="section-sub">Not sure which shade to pick? Start here.</p>
+      <div class="tools-grid">
+        <div class="tool-card">
+          <h3>Shade Finder</h3>
+          <p>Answer 3 quick questions and we'll point you to a shade that fits your look.</p>
+          <a href="tools/shade-finder.html" class="tool-cta">Find my shade</a>
+        </div>
 
-    <div class="tools-grid">
-      <div class="tool-card">
-        <h3>Shade Finder</h3>
-        <p>Answer 3 quick questions and we'll point you to a shade that fits your look.</p>
-        <a href="tools/shade-finder.html" class="tool-cta">Find my shade</a>
-      </div>
-
-      <div class="tool-card">
-        <h3>Cost Per Day</h3>
-        <p>See what a pair works out to per day of wear, based on your own plan.</p>
-        <div class="calc-row">
-          <label>Price (PKR)
-            <input type="number" id="calcPrice" value="999" min="1">
-          </label>
-          <label>Days you'll wear it
-            <input type="number" id="calcDays" value="30" min="1">
-          </label>
-        </div>
-        <p class="calc-result">≈ Rs.<span id="calcResult">33.30</span> / day</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="pick-color" aria-labelledby="pickColorTitle">
-  <div class="wrap">
-    <div class="featured-color-grid">
-      <article class="featured-color-card grey-card active" data-color="grey" data-name="grey" tabindex="0" aria-label="Shop by grey">
-        <div class="featured-color-topbar">
-          <span class="featured-badge">Trend style</span>
-        </div>
-        <div class="featured-color-headline">
-          <span class="featured-kicker">GRAY</span>
-          <span class="featured-sub">Lenses</span>
-        </div>
-        <div class="featured-lens-stage">
-          <img src="Shades/GreyHoney.jpg" alt="Grey Honey lens preview">
-        </div>
-        <div class="featured-feature-list">
-        </div>
-        <div class="featured-color-footer">
-          <h3>Shop By Gray</h3>
-          <button class="featured-color-btn" type="button">6 shades</button>
-        </div>
-      </article>
-
-      <article class="featured-color-card green-card" data-color="green" data-name="green" tabindex="0" aria-label="Shop by green">
-        <div class="featured-color-topbar">
-          <span class="featured-badge">Fresh look</span>
-        </div>
-        <div class="featured-color-headline green-headline">
-          <span class="featured-kicker">GREEN</span>
-          <span class="featured-sub">Lenses</span>
-        </div>
-        <div class="featured-lens-stage">
-          <img src="Shades/DollGreen.jpg" alt="Doll Green lens preview">
-        </div>
-        <div class="featured-feature-list">
-        </div>
-        <div class="featured-color-footer">
-          <h3>Shop By Green</h3>
-          <button class="featured-color-btn" type="button">4 shades</button>
-        </div>
-      </article>
-
-      <article class="featured-color-card brown-card" data-color="brown" data-name="brown" tabindex="0" aria-label="Shop by brown">
-        <div class="featured-color-topbar">
-          <span class="featured-badge">Warm tones</span>
-        </div>
-        <div class="featured-color-headline">
-          <span class="featured-kicker">BROWN</span>
-          <span class="featured-sub">Lenses</span>
-        </div>
-        <div class="featured-lens-stage">
-          <img src="Shades/DollBrown.jpg" alt="Doll Brown lens preview">
-        </div>
-        <div class="featured-feature-list">
-        </div>
-        <div class="featured-color-footer">
-          <h3>Shop By Brown</h3>
-          <button class="featured-color-btn" type="button">5 shades</button>
-        </div>
-      </article>
-
-      <article class="featured-color-card blue-card" data-color="blue" data-name="blue" tabindex="0" aria-label="Shop by blue">
-        <div class="featured-color-topbar">
-          <span class="featured-badge">Cool finish</span>
-        </div>
-        <div class="featured-color-headline">
-          <span class="featured-kicker">BLUE</span>
-          <span class="featured-sub">Lenses</span>
-        </div>
-        <div class="featured-lens-stage">
-          <img src="Shades/DollBlue.jpg" alt="Doll Blue lens preview">
-        </div>
-        <div class="featured-feature-list">
-        </div>
-        <div class="featured-color-footer">
-          <h3>Shop By Blue</h3>
-          <button class="featured-color-btn" type="button">4 shades</button>
-        </div>
-      </article>
-
-      <article class="featured-color-card black-card" data-color="black" data-name="black" tabindex="0" aria-label="Shop by black">
-        <div class="featured-color-topbar">
-          <span class="featured-badge">Bold drama</span>
-        </div>
-        <div class="featured-color-headline">
-          <span class="featured-kicker">BLACK</span>
-          <span class="featured-sub">Lenses</span>
-        </div>
-        <div class="featured-lens-stage">
-          <img src="Shades/DollBlackKorean.jpg" alt="Doll Black Korean lens preview">
-        </div>
-        <div class="featured-feature-list">
-        </div>
-        <div class="featured-color-footer">
-          <h3>Shop By Black</h3>
-          <button class="featured-color-btn" type="button">1 shade</button>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="grid-section" id="shop">
-  <div class="wrap">
-    <div class="results-row">
-      <div class="results-heading">
-        <h2 class="display" id="resultsTitle">Korean lenses</h2>
-        <button class="filter-clear" id="filterClear" type="button" aria-label="Clear color filter">✕</button>
-      </div>
-      <span id="resultsCount"></span>
-    </div>
-
-    <div class="grid" id="grid">
-      <!-- Product cards are rendered by script.js from the KOREAN_PRODUCTS array -->
-    </div>
-
-    <div class="empty-state" id="emptyState">
-      <p class="display">No shades match that search</p>
-      <p>Try a different name or clear the filter.</p>
-    </div>
-  </div>
-</section>
-
-<section class="grid-section dahab-section" id="dahab-section">
-  <div class="wrap">
-    <div class="results-row">
-      <div class="results-heading">
-        <h2 class="display">Dahab Lenses</h2>
-      </div>
-    </div>
-
-    <div class="grid" id="grid-dahab">
-      <!-- Dahab Lenses are rendered by script.js from the DAHAB_PRODUCTS array -->
-    </div>
-  </div>
-</section>
-
-<section class="trust" id="trust">
-  <div class="wrap">
-    <div class="trust-item">
-      <p class="display">Rs.999 introductory pricing</p>
-      <p>On every pair, while the launch offer lasts</p>
-    </div>
-    <div class="trust-item">
-      <p class="display">Cash on Delivery</p>
-      <p>Pay when your order reaches your door — no advance needed</p>
-    </div>
-    <div class="trust-item">
-      <p class="display">Order on WhatsApp</p>
-      <p>No account, no checkout form — just chat and confirm</p>
-    </div>
-    <div class="trust-item">
-      <p class="display">1-year shelf life</p>
-      <p>Sealed, sterile lenses in every box</p>
-    </div>
-  </div>
-</section>
-
-<section class="faq" id="faq">
-  <div class="wrap">
-    <h2 class="display faq-title">Frequently asked questions</h2>
-    <div class="faq-list">
-      <details class="faq-item" open>
-        <summary>Are these lenses original and safe?</summary>
-        <p>Yes — every pair is sealed and sterile with a 1-year shelf life. We don't sell loose, unbranded, or street-market lenses.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Do you offer Cash on Delivery?</summary>
-        <p>Yes, COD is available nationwide. Pay when your order arrives — no advance payment required.</p>
-      </details>
-      <details class="faq-item">
-        <summary>How long does delivery take?</summary>
-        <p>Most orders are dispatched within 1–2 business days and arrive within 2–4 working days depending on your city.</p>
-      </details>
-      <details class="faq-item">
-        <summary>How do I order?</summary>
-        <p>Tap "Buy on WhatsApp" on any lens — it opens a pre-filled chat with the shade and price. We confirm stock, then arrange COD delivery.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Can I wear these every day?</summary>
-        <p>Yes, they're comfort-fit lenses designed for everyday wear — just follow standard lens hygiene: clean hands, don't sleep in them unless labeled for it, and replace on schedule.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <h4 class="display footer-brand">LumiNoor</h4>
-        <p>Colored contact lenses made for everyday wear — soft, breathable, and true to your undertone.</p>
-      </div>
-      <div>
-        <h4>Shop</h4>
-        <a href="#shop">All lenses</a>
-        <a href="#tools">Tools</a>
-        <a href="#faq">FAQ</a>
-        <a href="#shop">Grey tones</a>
-        <a href="#shop">Brown tones</a>
-        <a href="#shop">Blue &amp; green</a>
-      </div>
-      <div>
-        <h4>Support</h4>
-        <a href="#" id="waTrackOrder">Track order (WhatsApp)</a>
-        <a href="#" id="waContactUs">Contact us (WhatsApp)</a>
-        <a href="#">Lens care guide</a>
-        <a href="policies.html">Policies</a>
-      </div>
-      <div>
-        <h4>Follow LumiNoor</h4>
-        <p>New shades and offers, shared once in a while.</p>
-        <div class="social-links">
-          <a class="social-btn" href="https://www.facebook.com/yoursownluminoor" target="_blank" rel="noopener noreferrer" aria-label="Follow LumiNoor on Facebook">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.6.4-1 1-1Z" fill="currentColor"/></svg>
-          </a>
-          <a class="social-btn" href="https://www.instagram.com/yoursownluminoor" target="_blank" rel="noopener noreferrer" aria-label="Follow LumiNoor on Instagram">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-          </a>
+        <div class="tool-card">
+          <h3>Cost Per Day</h3>
+          <p>See what a pair works out to per day of wear, based on your own plan.</p>
+          <div class="calc-row">
+            <label>Price (PKR)
+              <input type="number" id="calcPrice" value="999" min="1">
+            </label>
+            <label>Days you'll wear it
+              <input type="number" id="calcDays" value="30" min="1">
+            </label>
+          </div>
+          <p class="calc-result">≈ Rs.<span id="calcResult">33.30</span> / day</p>
         </div>
       </div>
     </div>
-    <div class="bottom-bar">
-      <span>© 2026 LumiNoor. All rights reserved.</span>
-      <span>Karachi, Pakistan</span>
+  </section>
+
+  <section class="grid-section" id="shop">
+    <div class="wrap">
+      <div class="results-row">
+        <div class="results-heading">
+          <h2 class="display" id="resultsTitle">Korean lenses</h2>
+        </div>
+        <span id="resultsCount"></span>
+      </div>
+
+      <div class="grid" id="grid">
+        <!-- Product cards are rendered by script.js from the KOREAN_PRODUCTS array -->
+      </div>
+
+      <div class="empty-state" id="emptyState">
+        <p class="display">No shades match that search</p>
+        <p>Try a different name.</p>
+      </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<!-- Toast shown briefly after a "Buy on WhatsApp" tap, before the WhatsApp tab opens -->
-<div class="toast" id="toast"><span class="dot"></span><span id="toastText">Opening WhatsApp…</span></div>
+  <section class="grid-section dahab-section" id="dahab-section">
+    <div class="wrap">
+      <div class="results-row">
+        <div class="results-heading">
+          <h2 class="display">Dahab Lenses</h2>
+        </div>
+      </div>
 
-<!-- All product data + WhatsApp buy logic + tools logic lives in script.js -->
-<script src="script.js"></script>
+      <h3 class="display dahab-subtitle">Gold Collection</h3>
+      <div class="grid" id="grid-dahab-gold">
+        <!-- Gold Dahab lenses are rendered by script.js. -->
+      </div>
+
+      <h3 class="display dahab-subtitle">Platinum Collection</h3>
+      <div class="grid" id="grid-dahab-platinum">
+        <!-- Platinum Dahab lenses are rendered by script.js. -->
+      </div>
+    </div>
+  </section>
+
+  <section class="trust" id="trust">
+    <div class="wrap">
+      <div class="trust-item">
+        <p class="display">Rs.999 introductory pricing</p>
+        <p>On every pair, while the launch offer lasts</p>
+      </div>
+      <div class="trust-item">
+        <p class="display">Cash on Delivery</p>
+        <p>Pay when your order reaches your door — no advance needed</p>
+      </div>
+      <div class="trust-item">
+        <p class="display">Order on WhatsApp</p>
+        <p>No account, no checkout form — just chat and confirm</p>
+      </div>
+      <div class="trust-item">
+        <p class="display">1-year shelf life</p>
+        <p>Sealed, sterile lenses in every box</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <h2 class="display faq-title">Frequently asked questions</h2>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>Are these lenses original and safe?</summary>
+          <p>Yes — every pair is sealed and sterile with a 1-year shelf life. We don't sell loose, unbranded, or
+            street-market lenses.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you offer Cash on Delivery?</summary>
+          <p>Yes, COD is available nationwide. Pay when your order arrives — no advance payment required.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How long does delivery take?</summary>
+          <p>Most orders are dispatched within 1–2 business days and arrive within 2–4 working days depending on your
+            city.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do I order?</summary>
+          <p>Tap "Buy on WhatsApp" on any lens — it opens a pre-filled chat with the shade and price. We confirm stock,
+            then arrange COD delivery.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I wear these every day?</summary>
+          <p>Yes, they're comfort-fit lenses designed for everyday wear — just follow standard lens hygiene: clean
+            hands, don't sleep in them unless labeled for it, and replace on schedule.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h4 class="display footer-brand">LumiNoor</h4>
+          <p>Colored contact lenses made for everyday wear — soft, breathable, and true to your undertone.</p>
+        </div>
+        <div>
+          <h4>Shop</h4>
+          <a href="#shop">All lenses</a>
+          <a href="#tools">Tools</a>
+          <a href="#faq">FAQ</a>
+          <a href="#shop">Grey tones</a>
+          <a href="#shop">Brown tones</a>
+          <a href="#shop">Blue &amp; green</a>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <a href="#" id="waTrackOrder">Track order (WhatsApp)</a>
+          <a href="#" id="waContactUs">Contact us (WhatsApp)</a>
+          <a href="#">Lens care guide</a>
+          <a href="policies.html">Policies</a>
+        </div>
+        <div>
+          <h4>Follow LumiNoor</h4>
+          <p>New shades and offers, shared once in a while.</p>
+          <div class="social-links">
+            <a class="social-btn" href="https://www.facebook.com/yoursownluminoor" target="_blank"
+              rel="noopener noreferrer" aria-label="Follow LumiNoor on Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.6.4-1 1-1Z" fill="currentColor" />
+              </svg>
+            </a>
+            <a class="social-btn" href="https://www.instagram.com/yoursownluminoor" target="_blank"
+              rel="noopener noreferrer" aria-label="Follow LumiNoor on Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2" />
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+              </svg>
+            </a>
+            <a class="social-btn" href="https://wa.me/923372110771?text=Hi%20LumiNoor!%20I%20have%20a%20question%20about%20your%20lenses."
+              target="_blank" rel="noopener noreferrer" aria-label="Contact LumiNoor on WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3z" />
+                <path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <span>© 2026 LumiNoor. All rights reserved.</span>
+        <span>Karachi, Pakistan</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast shown briefly after a "Buy on WhatsApp" tap, before the WhatsApp tab opens -->
+  <div class="toast" id="toast"><span class="dot"></span><span id="toastText">Opening WhatsApp…</span></div>
+
+  <!-- All product data + WhatsApp buy logic + tools logic lives in script.js -->
+  <script src="script.js"></script>
 </body>
+
 </html>

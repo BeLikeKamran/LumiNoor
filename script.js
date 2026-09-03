@@ -35,7 +35,9 @@ function siteBaseUrl() {
 // Links to that product's own page (products/<id>.html) so the WhatsApp
 // preview shows THAT lens's photo, not a generic site preview.
 function productMessage(product) {
-  const productUrl = `${siteBaseUrl()}products/${product.id}.html`;
+  const productUrl = product.category === "gold"
+    ? `${siteBaseUrl()}#${product.id}`
+    : `${siteBaseUrl()}products/${product.id}.html`;
   return `Hi LumiNoor! I'd like to order ${product.name} (Rs.${product.sale}). Is it in stock?\n\n${productUrl}`;
 }
 
@@ -53,7 +55,7 @@ const KOREAN_PRODUCTS = [
   {
     id: "greyhoney",
     name: "Grey Honey",
-    image: "Shades/GreyHoney.jpg",
+    image: "Shades/1-GreyHoney.jpg",
     color: "grey",
     swatch: ["#D9C9A6", "#8A7550"],
     price: 1499,
@@ -62,7 +64,7 @@ const KOREAN_PRODUCTS = [
   {
     id: "greybrown",
     name: "Grey Brown",
-    image: "Shades/GreyBrown.jpg",
+    image: "Shades/2-GreyBrown.jpg",
     color: "grey",
     swatch: ["#9C9C96", "#46433F"],
     price: 1499,
@@ -71,7 +73,7 @@ const KOREAN_PRODUCTS = [
   {
     id: "dollshadowglittergrey",
     name: "Doll Shadow Glitter Grey",
-    image: "Shades/DollShadowGlitterGrey.jpg",
+    image: "Shades/3-DollShadowGlitterGrey.jpg",
     color: "grey",
     swatch: ["#A6A7A9", "#3D3E40"],
     price: 1499,
@@ -80,7 +82,7 @@ const KOREAN_PRODUCTS = [
   {
     id: "dollgreen",
     name: "Doll Green",
-    image: "Shades/DollGreen.jpg",
+    image: "Shades/4-DollGreen.jpg",
     color: "green",
     swatch: ["#AFCBAC", "#4E7A5B"],
     price: 1499,
@@ -89,7 +91,7 @@ const KOREAN_PRODUCTS = [
   {
     id: "dollglittergrey",
     name: "Doll Glitter Grey",
-    image: "Shades/DollGlitterGrey.jpg",
+    image: "Shades/5-DollGlitterGrey.jpg",
     color: "grey",
     swatch: ["#A2A3A5", "#403F41"],
     price: 1499,
@@ -98,7 +100,7 @@ const KOREAN_PRODUCTS = [
   {
     id: "dollbrown",
     name: "Doll Brown",
-    image: "Shades/DollBrown.jpg",
+    image: "Shades/6-DollBrown.jpg",
     color: "brown",
     swatch: ["#C79A63", "#5C3A1E"],
     price: 1499,
@@ -107,7 +109,7 @@ const KOREAN_PRODUCTS = [
   {
     id: "dollblue",
     name: "Doll Blue",
-    image: "Shades/DollBlue.jpg",
+    image: "Shades/7-DollBlue.jpg",
     color: "blue",
     swatch: ["#93BEDD", "#2C5A82"],
     price: 1499,
@@ -116,7 +118,7 @@ const KOREAN_PRODUCTS = [
   {
     id: "dollblackkorean",
     name: "Doll Black Korean",
-    image: "Shades/DollBlackKorean.jpg",
+    image: "Shades/8-DollBlackKorean.jpg",
     color: "black",
     swatch: ["#75757A", "#1C1C1E"],
     price: 1499,
@@ -125,7 +127,7 @@ const KOREAN_PRODUCTS = [
   {
     id: "chocolatedollbrown",
     name: "Chocolate Doll Brown",
-    image: "Shades/ChocolateDollBrown.jpg",
+    image: "Shades/9-ChocolateDollBrown.jpg",
     color: "brown",
     swatch: ["#B07E4C", "#4A2C14"],
     price: 1499,
@@ -134,7 +136,7 @@ const KOREAN_PRODUCTS = [
   {
     id: "sydneygreen",
     name: "Sydney Green",
-    image: "Shades/SydneyGreen.jpg",
+    image: "Shades/10-SydneyGreen.jpg",
     color: "green",
     swatch: ["#A7C4AA", "#446B5E"],
     price: 1499,
@@ -143,7 +145,7 @@ const KOREAN_PRODUCTS = [
   {
     id: "russianblue",
     name: "Russian Blue",
-    image: "Shades/RussianBlue.jpg",
+    image: "Shades/11-RussianBlue.jpg",
     color: "blue",
     swatch: ["#90A9D5", "#2D4F7F"],
     price: 1499,
@@ -152,7 +154,7 @@ const KOREAN_PRODUCTS = [
   {
     id: "miragegreen",
     name: "Mirage Green",
-    image: "Shades/MirageGreen.jpg",
+    image: "Shades/12-MirageGreen.jpg",
     color: "green",
     swatch: ["#B9D2B4", "#4E765B"],
     price: 1499,
@@ -161,7 +163,7 @@ const KOREAN_PRODUCTS = [
   {
     id: "emberrose",
     name: "Ember Rose",
-    image: "Shades/EmberRose.jpg",
+    image: "Shades/13-EmberRose.jpg",
     color: "brown",
     swatch: ["#D69E9A", "#7A4B3F"],
     price: 1499,
@@ -170,7 +172,7 @@ const KOREAN_PRODUCTS = [
   {
     id: "diamondgray",
     name: "Diamond Gray",
-    image: "Shades/DiamondGray.jpg",
+    image: "Shades/14-DiamondGray.jpg",
     color: "grey",
     swatch: ["#D3D3D5", "#59616A"],
     price: 1499,
@@ -179,7 +181,7 @@ const KOREAN_PRODUCTS = [
   {
     id: "diamondbrown",
     name: "Diamond Brown",
-    image: "Shades/DiamondBrown.jpg",
+    image: "Shades/15-DiamondBrown.jpg",
     color: "brown",
     swatch: ["#CFA67A", "#5B3822"],
     price: 1499,
@@ -188,7 +190,7 @@ const KOREAN_PRODUCTS = [
   {
     id: "diamondblue",
     name: "Diamond Blue",
-    image: "Shades/DiamondBlue.jpg",
+    image: "Shades/16-DiamondBlue.jpg",
     color: "blue",
     swatch: ["#9BB9D8", "#2D5F8A"],
     price: 1499,
@@ -197,7 +199,7 @@ const KOREAN_PRODUCTS = [
   {
     id: "dnabrown",
     name: "DNA Brown",
-    image: "Shades/DNABrown.jpg",
+    image: "Shades/17-DNABrown.jpg",
     color: "brown",
     swatch: ["#C49768", "#4B2C14"],
     price: 1499,
@@ -206,7 +208,7 @@ const KOREAN_PRODUCTS = [
   {
     id: "anglegrey",
     name: "Angel Grey",
-    image: "Shades/AngelGrey.jpg",
+    image: "Shades/18-AngelGrey.jpg",
     color: "grey",
     swatch: ["#D0D0D3", "#5D6069"],
     price: 1499,
@@ -215,7 +217,7 @@ const KOREAN_PRODUCTS = [
   {
     id: "auragreen",
     name: "Aura Green",
-    image: "Shades/AuraGreen.jpg",
+    image: "Shades/19-AuraGreen.jpg",
     color: "green",
     swatch: ["#BED8AF", "#5D7A5C"],
     price: 1499,
@@ -223,11 +225,47 @@ const KOREAN_PRODUCTS = [
   },
 ];
 
-const DAHAB_PRODUCTS = [
+const DAHAB_GOLD_SHADES = [
+  ["Lumirere Blue", "1-LumirereBlue.png", "blue"],
+  ["Lumirere Hazel", "2-LumirereHazel.jpg", "brown"],
+  ["Lumirere Gray", "3-LumirereGray.jpg", "grey"],
+  ["Solitaire", "4-Solitaire.jpg", "grey"],
+  ["Sabrin Gray Green", "5-SabrinGrayGreen.jpg", "green"],
+  ["Sabrin Soul", "6-SabrinSoul.jpg", "brown"],
+  ["Sabrin Gray", "7-SabrinGray.jpg", "grey"],
+  ["Swarovski", "8-Swarovski.jpg", "grey"],
+  ["Sun Kiss", "9-SunKiss.jpg", "brown"],
+  ["Medusa", "10-Medusa.jpg", "green"],
+  ["Diamond", "11-Diamond.jpg", "brown"],
+  ["Topaz", "12-Topaz.jpg", "brown"],
+  ["Sky", "13-Sky.jpg", "blue"],
+  ["Cat Eye", "14-CatEye.jpg", "brown"],
+  ["Creamy", "15-Creamy.jpg", "brown"],
+  ["Lumirere Green", "16-LumirereGreen.jpg", "green"],
+  ["Lumirere Brown", "17-LumirereBrown.jpg", "brown"],
+  ["Ice", "18-Ice.jpg", "grey"],
+  ["Aqua", "20-Aqua.jpg", "green"],
+  ["Caramel", "21-Caramel.jpg", "brown"],
+  ["Tiffany Blue", "22-TiffanyBlue.jpg", "blue"],
+  ["Hind", "23-Hind.jpg", "grey"],
+  ["Kaf", "41-Kaf.jpg", "brown"],
+  ["Smokey", "42-Smokey.jpg", "grey"],
+].map(([name, image, color]) => ({
+  id: `dahab-${name.toLowerCase().replace(/\s+/g, "-")}`,
+  name,
+  image: `Shades/${image}`,
+  color,
+  swatch: ["#D0C4B8", "#5C514A"],
+  price: 1499,
+  sale: 999,
+  category: "gold",
+}));
+
+const DAHAB_PLATINUM_PRODUCTS = [
   {
     id: "alaska",
     name: "Alaska",
-    image: "Shades/alaska.png",
+    image: "Shades/P1-Alaska.png",
     color: "blue",
     swatch: ["#B0D8E9", "#3C7FA1"],
     price: 1499,
@@ -236,7 +274,7 @@ const DAHAB_PRODUCTS = [
   {
     id: "hawaii",
     name: "Hawaii",
-    image: "Shades/hawaii.png",
+    image: "Shades/P4-Hawaii.png",
     color: "green",
     swatch: ["#B5D9B0", "#557A52"],
     price: 1499,
@@ -245,7 +283,7 @@ const DAHAB_PRODUCTS = [
   {
     id: "khaki",
     name: "Khaki",
-    image: "Shades/khaki.png",
+    image: "Shades/P8-Khaki.png",
     color: "brown",
     swatch: ["#B5A16D", "#5E4E2B"],
     price: 1499,
@@ -254,7 +292,7 @@ const DAHAB_PRODUCTS = [
   {
     id: "mentha",
     name: "Mentha",
-    image: "Shades/mentha.png",
+    image: "Shades/P5-Mentha.png",
     color: "green",
     swatch: ["#B7E6D8", "#4E8A77"],
     price: 1499,
@@ -263,7 +301,7 @@ const DAHAB_PRODUCTS = [
   {
     id: "olive",
     name: "Olive",
-    image: "Shades/olive.png",
+    image: "Shades/P7-Olive.png",
     color: "green",
     swatch: ["#B8B77A", "#5F6932"],
     price: 1499,
@@ -272,7 +310,7 @@ const DAHAB_PRODUCTS = [
   {
     id: "perle",
     name: "Perle",
-    image: "Shades/perle.png",
+    image: "Shades/P3-Perle.png",
     color: "grey",
     swatch: ["#D7D0CA", "#6F6B69"],
     price: 1499,
@@ -281,7 +319,7 @@ const DAHAB_PRODUCTS = [
   {
     id: "rain",
     name: "Rain",
-    image: "Shades/rain.png",
+    image: "Shades/P6-Rain.png",
     color: "grey",
     swatch: ["#C9CEDA", "#5C6473"],
     price: 1499,
@@ -289,7 +327,12 @@ const DAHAB_PRODUCTS = [
   },
 ];
 
-const PRODUCTS = [...KOREAN_PRODUCTS, ...DAHAB_PRODUCTS];
+const DAHAB_PRODUCTS = [...DAHAB_GOLD_SHADES, ...DAHAB_PLATINUM_PRODUCTS];
+
+const PRODUCTS = [
+  ...KOREAN_PRODUCTS.map((product) => ({ ...product, category: "korean" })),
+  ...DAHAB_PRODUCTS,
+];
 
 /* ================================ RENDERING ================================ */
 
@@ -315,7 +358,7 @@ function cardHTML(p) {
 }
 
 const grid = document.getElementById("grid");
-const dahabGrid = document.getElementById("grid-dahab");
+const dahabGrids = document.querySelectorAll("#grid-dahab-gold, #grid-dahab-platinum");
 const emptyState = document.getElementById("emptyState");
 const resultsCount = document.getElementById("resultsCount");
 const resultsTitle = document.getElementById("resultsTitle");
@@ -327,6 +370,7 @@ function buildNavigation() {
     `<a href="#shop" class="active">Shop</a>`,
     `<a href="#tools">Tools</a>`,
     `<a href="#faq">FAQ</a>`,
+    `<a href="policies.html">Policies</a>`,
   ].join("");
 }
 
@@ -337,12 +381,13 @@ function renderGrid() {
 }
 
 function renderDahabGrid() {
-  if (dahabGrid) {
-    dahabGrid.innerHTML = DAHAB_PRODUCTS.map(cardHTML).join("");
-  }
+  const goldGrid = document.getElementById("grid-dahab-gold");
+  const platinumGrid = document.getElementById("grid-dahab-platinum");
+  if (goldGrid) goldGrid.innerHTML = DAHAB_GOLD_SHADES.map(cardHTML).join("");
+  if (platinumGrid) platinumGrid.innerHTML = DAHAB_PLATINUM_PRODUCTS.map(cardHTML).join("");
 }
 
-if (grid || dahabGrid) {
+if (grid || dahabGrids.length) {
   buildNavigation();
   renderGrid();
   renderDahabGrid();
@@ -351,26 +396,21 @@ if (grid || dahabGrid) {
 /* ================================ FILTER + SEARCH ================================ */
 
 let query = "";
-let activeColor = "all";
-
-function formatColorTitle(color) {
+function formatColorTitle() {
   return "Korean lenses";
 }
 
 function updateResultsTitle() {
   if (!resultsTitle) return;
-  resultsTitle.textContent = formatColorTitle(activeColor);
-  if (filterClear) {
-    filterClear.classList.toggle("hidden", activeColor === "all");
-  }
+  resultsTitle.textContent = formatColorTitle();
 }
 
 function applyFilters() {
   let visible = 0;
+  document.body.classList.toggle("search-active", Boolean(query));
   document.querySelectorAll(".card").forEach((card) => {
     const matchesQuery = card.dataset.name.includes(query);
-    const matchesColor = activeColor === "all" || card.dataset.color === activeColor;
-    const show = matchesQuery && matchesColor;
+    const show = matchesQuery;
     card.style.display = show ? "" : "none";
     if (show) visible++;
   });
@@ -390,47 +430,16 @@ if (searchToggle) {
   });
 }
 
+document.addEventListener("click", (event) => {
+  if (!searchField?.classList.contains("open")) return;
+  if (searchField.contains(event.target) || searchToggle?.contains(event.target)) return;
+  searchField.classList.remove("open");
+});
+
 if (searchInput) {
   searchInput.addEventListener("input", (e) => {
     query = e.target.value.trim().toLowerCase();
     applyFilters();
-  });
-}
-
-if (filterClear) {
-  filterClear.addEventListener("click", () => {
-    activeColor = "all";
-    document.querySelectorAll(".featured-color-card").forEach((card) => {
-      card.classList.remove("active");
-    });
-    applyFilters();
-  });
-}
-
-const colorPicks = document.querySelectorAll(".featured-color-card, .color-pick");
-if (colorPicks.length) {
-  colorPicks.forEach((button) => {
-    button.addEventListener("click", () => {
-      const nextColor = button.dataset.color || "all";
-      const shouldDeselect = button.classList.contains("active") || activeColor === nextColor;
-
-      if (shouldDeselect) {
-        activeColor = "all";
-        document.querySelectorAll(".featured-color-card").forEach((card) => {
-          card.classList.remove("active");
-        });
-      } else {
-        activeColor = nextColor;
-        document.querySelectorAll(".featured-color-card").forEach((card) => {
-          card.classList.toggle("active", card.dataset.color === nextColor && nextColor !== "all");
-        });
-      }
-
-      applyFilters();
-      if (activeColor !== "all") {
-        document.getElementById("shop")?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    });
   });
 }
 
@@ -466,7 +475,7 @@ function attachBuyButtonListener(gridElement) {
 }
 
 attachBuyButtonListener(grid);
-attachBuyButtonListener(dahabGrid);
+dahabGrids.forEach(attachBuyButtonListener);
 
 const contactLink = document.getElementById("waContactUs");
 const trackOrderLink = document.getElementById("waTrackOrder");
@@ -533,6 +542,10 @@ if (finderProductGrid) {
   let currentStep = "1";
   let quizAnswers = {};
 
+  function selectedCategory() {
+    return quizAnswers.collection === "dahab" ? "dahab" : quizAnswers.collection === "korean" ? "korean" : "";
+  }
+
   function finderImage(product) {
     return `../${product.image}`;
   }
@@ -566,25 +579,41 @@ if (finderProductGrid) {
     return skinToneLooks[quizAnswers.skinTone] || "";
   }
 
+  function collectionMatches(product) {
+    const collection = selectedCategory();
+    return !collection || product.category === collection || (collection === "dahab" && ["gold", "platinum"].includes(product.category));
+  }
+
+  function productScore(product, look, tone) {
+    let score = 0;
+    if (quizAnswers.colorPreference === product.color) score += 6;
+    if (look && lookCategory(product) === look) score += 4;
+    if (tone && toneFamily(product.color) === tone) score += 3;
+    if (quizAnswers.occasion === "daily" && ["grey", "brown"].includes(product.color)) score += 2;
+    if (quizAnswers.occasion === "mehndi" && ["brown", "green"].includes(product.color)) score += 2;
+    if (["baraat", "walima", "photoshoot"].includes(quizAnswers.occasion) && ["blue", "green"].includes(product.color)) score += 2;
+    if (quizAnswers.drama === "subtle" && !["blue", "green", "black"].includes(product.color)) score += 2;
+    if (quizAnswers.drama === "dramatic" && ["blue", "green", "black"].includes(product.color)) score += 2;
+    return score;
+  }
+
   function pickBestMatch(look, tone) {
-    return PRODUCTS.reduce((bestProduct, product) => {
-      const productScore = (lookCategory(product) === look ? 2 : 0) + (toneFamily(product.color) === tone ? 2 : 0);
-      const bestScore = (lookCategory(bestProduct) === look ? 2 : 0) + (toneFamily(bestProduct.color) === tone ? 2 : 0);
-      return productScore > bestScore ? product : bestProduct;
-    }, PRODUCTS[0]);
+    return PRODUCTS.filter(collectionMatches)
+      .sort((left, right) => productScore(right, look, tone) - productScore(left, look, tone))[0];
   }
 
   function matchingProducts() {
     const look = desiredLook();
     const tone = preferredTone();
-    return PRODUCTS.filter((product) => (!look || lookCategory(product) === look) && (!tone || toneFamily(product.color) === tone));
+    return PRODUCTS.filter(collectionMatches)
+      .sort((left, right) => productScore(right, look, tone) - productScore(left, look, tone));
   }
 
   function renderFinderGrid() {
     let products = matchingProducts();
     if (quizAnswers.skinTone && quizAnswers.occasion && quizAnswers.drama) {
       const finalMatch = pickBestMatch(desiredLook(), preferredTone());
-      products = products.filter((product) => product.id !== finalMatch.id);
+      products = products.filter((product) => product.id !== finalMatch.id).slice(0, 6);
     }
     finderProductCount.textContent = `${products.length} shade${products.length === 1 ? "" : "s"}`;
     finderProductGrid.innerHTML = products.map((product) => `
@@ -603,15 +632,15 @@ if (finderProductGrid) {
   }
 
   function updateFinderMenu() {
-    const progress = currentStep === "1" ? 33.333 : currentStep === "2" ? 66.667 : quizAnswers.drama ? 100 : 66.667;
+    const progress = currentStep === "1" ? 20 : currentStep === "2" ? 40 : currentStep === "3" ? 60 : currentStep === "4" ? 80 : 100;
     document.getElementById("quizProgressBar").style.width = `${progress}%`;
-    questionOne.classList.toggle("active", currentStep === "1");
-    questionTwo.classList.toggle("active", currentStep === "2");
-    questionThree.classList.toggle("active", currentStep === "3");
+    document.querySelectorAll(".quiz-question").forEach((question) => {
+      question.classList.toggle("active", question.dataset.step === currentStep);
+    });
   }
 
   function updateFinalMatch() {
-    const hasAllAnswers = Boolean(quizAnswers.skinTone && quizAnswers.occasion && quizAnswers.drama);
+    const hasAllAnswers = Boolean(quizAnswers.collection && quizAnswers.colorPreference && quizAnswers.skinTone && quizAnswers.occasion && quizAnswers.drama);
     if (!hasAllAnswers) {
       const previewProduct = matchingProducts()[0];
       if (previewProduct) {
@@ -653,35 +682,48 @@ if (finderProductGrid) {
 
   function refreshSelectedOptions() {
     document.querySelectorAll(".quiz-option").forEach((option) => {
-      const choiceKey = option.dataset.skinTone ? "skinTone" : option.dataset.occasion ? "occasion" : "drama";
-      const choiceValue = option.dataset.skinTone || option.dataset.occasion || option.dataset.drama;
+      const choiceKey = option.dataset.collection ? "collection" : option.dataset.colorPreference ? "colorPreference" : option.dataset.skinTone ? "skinTone" : option.dataset.occasion ? "occasion" : "drama";
+      const choiceValue = option.dataset.collection || option.dataset.colorPreference || option.dataset.skinTone || option.dataset.occasion || option.dataset.drama;
       option.classList.toggle("selected", quizAnswers[choiceKey] === choiceValue);
     });
   }
 
   document.querySelectorAll(".quiz-option").forEach((button) => {
     button.addEventListener("click", () => {
-      const choiceKey = button.dataset.skinTone ? "skinTone" : button.dataset.occasion ? "occasion" : "drama";
-      const choiceValue = button.dataset.skinTone || button.dataset.occasion || button.dataset.drama;
+      const choiceKey = button.dataset.collection ? "collection" : button.dataset.colorPreference ? "colorPreference" : button.dataset.skinTone ? "skinTone" : button.dataset.occasion ? "occasion" : "drama";
+      const choiceValue = button.dataset.collection || button.dataset.colorPreference || button.dataset.skinTone || button.dataset.occasion || button.dataset.drama;
       quizAnswers[choiceKey] = quizAnswers[choiceKey] === choiceValue ? "" : choiceValue;
+      if (choiceKey === "collection") {
+        quizAnswers.colorPreference = "";
+        quizAnswers.skinTone = "";
+        quizAnswers.occasion = "";
+        quizAnswers.drama = "";
+        currentStep = quizAnswers.collection ? "2" : "1";
+      }
+      if (choiceKey === "colorPreference") {
+        quizAnswers.skinTone = "";
+        quizAnswers.occasion = "";
+        quizAnswers.drama = "";
+        currentStep = quizAnswers.colorPreference ? "3" : "2";
+      }
       if (choiceKey === "skinTone") {
         quizAnswers.occasion = "";
         quizAnswers.drama = "";
-        currentStep = quizAnswers.skinTone ? "2" : "1";
+        currentStep = quizAnswers.skinTone ? "4" : "3";
       }
       if (choiceKey === "occasion") {
         quizAnswers.drama = "";
-        currentStep = quizAnswers.occasion ? "3" : "2";
+        currentStep = quizAnswers.occasion ? "5" : "4";
       }
-      if (choiceKey === "drama") currentStep = "3";
+      if (choiceKey === "drama") currentStep = "5";
       refreshSelectedOptions();
       updateFinder();
     });
   });
 
   document.addEventListener("click", (event) => {
-    const allChoicesSelected = quizAnswers.skinTone && quizAnswers.occasion && quizAnswers.drama;
-    const hasPartialChoice = quizAnswers.skinTone || quizAnswers.occasion || quizAnswers.drama;
+    const allChoicesSelected = quizAnswers.collection && quizAnswers.colorPreference && quizAnswers.skinTone && quizAnswers.occasion && quizAnswers.drama;
+    const hasPartialChoice = quizAnswers.collection || quizAnswers.colorPreference || quizAnswers.skinTone || quizAnswers.occasion || quizAnswers.drama;
     if (!hasPartialChoice || allChoicesSelected || event.target.closest(".quiz-page-card")) return;
     quizAnswers = {};
     currentStep = "1";

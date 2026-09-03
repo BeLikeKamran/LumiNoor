@@ -26,6 +26,14 @@
       </a>
       <div class="header-actions">
         <a href="../index.html" class="icon-btn finder-back" aria-label="Back to shop">← All shades</a>
+        <a class="whatsapp-header-btn" href="https://wa.me/923372110771?text=Hi%20LumiNoor!%20I%20have%20a%20question%20about%20your%20lenses."
+          target="_blank" rel="noopener noreferrer" aria-label="Contact LumiNoor on WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3z" />
+            <path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z" />
+          </svg>
+          <span>Contact WhatsApp</span>
+        </a>
       </div>
     </div>
   </header>
@@ -34,7 +42,7 @@
     <div class="finder-header">
       <p class="eyebrow">Shade Finder</p>
       <h1 class="display">Find your shade</h1>
-      <p>Three quick questions — we'll point you to shades that fit your look.</p>
+          <p>Five quick questions — we'll point you to a shade that fits your look.</p>
     </div>
 
     <div class="finder-combined-card">
@@ -44,7 +52,7 @@
         <div class="finder-result-media">
           <span id="finderResultBadge" class="badge-sale" hidden>Sale</span>
           <div id="finderResultShimmer" class="finder-result-shimmer" aria-label="Waiting for your choices">
-            <img id="finderPreviewImage" src="../Shades/DollBrown.jpg" alt="Preview of a possible shade" loading="lazy">
+            <img id="finderPreviewImage" src="../Shades/6-DollBrown.jpg" alt="Preview of a possible shade" loading="lazy">
           </div>
           <img id="finderResultImage" src="" alt="" loading="lazy" hidden>
           <div id="finderResultSwatch" class="swatch" hidden></div>
@@ -63,17 +71,40 @@
         </div>
 
         <div class="quiz-question active" data-step="1">
-          <p class="step-label">Question 1 of 3</p>
+          <p class="step-label">Question 1 of 5</p>
+          <h3 class="display">Which collection do you want?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option" data-collection="korean" type="button">Korean</button>
+            <button class="quiz-option" data-collection="dahab" type="button">Dahab</button>
+          </div>
+        </div>
+
+        <div class="quiz-question" data-step="2">
+          <p class="step-label">Question 2 of 5</p>
+          <h3 class="display">Which color do you prefer?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option" data-color-preference="brown" type="button">Brown / Hazel</button>
+            <button class="quiz-option" data-color-preference="grey" type="button">Grey</button>
+            <button class="quiz-option" data-color-preference="blue" type="button">Blue</button>
+            <button class="quiz-option" data-color-preference="green" type="button">Green</button>
+            <button class="quiz-option" data-color-preference="black" type="button">Black</button>
+          </div>
+          <button class="quiz-back" data-back-to="1" type="button">← Back</button>
+        </div>
+
+        <div class="quiz-question" data-step="3">
+          <p class="step-label">Question 3 of 5</p>
           <h3 class="display">What's your skin tone?</h3>
           <div class="quiz-options">
             <button class="quiz-option" data-skin-tone="fair" type="button">Fair</button>
             <button class="quiz-option" data-skin-tone="wheatish" type="button">Wheatish</button>
             <button class="quiz-option" data-skin-tone="deep" type="button">Deep / Dusky</button>
           </div>
+          <button class="quiz-back" data-back-to="2" type="button">← Back</button>
         </div>
 
-        <div class="quiz-question" data-step="2">
-          <p class="step-label">Question 2 of 3</p>
+        <div class="quiz-question" data-step="4">
+          <p class="step-label">Question 4 of 5</p>
           <h3 class="display">What are these for?</h3>
           <div class="quiz-options">
             <button class="quiz-option" data-occasion="daily" type="button">Daily / Office</button>
@@ -83,18 +114,18 @@
             <button class="quiz-option" data-occasion="casual" type="button">Casual</button>
             <button class="quiz-option" data-occasion="photoshoot" type="button">Photoshoot</button>
           </div>
-          <button class="quiz-back" data-back-to="1" type="button">← Back</button>
+          <button class="quiz-back" data-back-to="3" type="button">← Back</button>
         </div>
 
-        <div class="quiz-question" data-step="3">
-          <p class="step-label">Question 3 of 3</p>
+        <div class="quiz-question" data-step="5">
+          <p class="step-label">Question 5 of 5</p>
           <h3 class="display">How big a change do you want?</h3>
           <div class="quiz-options">
             <button class="quiz-option" data-drama="subtle" type="button">Subtle</button>
             <button class="quiz-option" data-drama="noticeable" type="button">Noticeable</button>
             <button class="quiz-option" data-drama="dramatic" type="button">Dramatic</button>
           </div>
-          <button class="quiz-back" data-back-to="2" type="button">← Back</button>
+          <button class="quiz-back" data-back-to="4" type="button">← Back</button>
         </div>
         </section>
       </div>

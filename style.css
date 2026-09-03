@@ -211,6 +211,36 @@ nav.main-nav a.active::after {
   border: 0;
 }
 
+.whatsapp-header-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 0 13px;
+  border-radius: 20px;
+  background: #168c54;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  white-space: nowrap;
+  transition: background .2s, transform .2s;
+}
+
+.whatsapp-header-btn:hover {
+  background: #117345;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.whatsapp-header-btn svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+  stroke: none;
+  flex-shrink: 0;
+}
+
 .icon-btn:hover {
   background: var(--bg-soft);
   color: var(--fg);
@@ -296,6 +326,16 @@ nav.main-nav a.active::after {
 
   .header-actions > .icon-btn[aria-label="Account"] {
     display: none;
+  }
+
+  .whatsapp-header-btn span {
+    display: none;
+  }
+
+  .whatsapp-header-btn {
+    width: 38px;
+    padding: 0;
+    justify-content: center;
   }
 
 }
@@ -802,6 +842,19 @@ nav.main-nav a.active::after {
   padding-bottom: 100px;
 }
 
+body.search-active .topbar,
+body.search-active .hero,
+body.search-active .tools,
+body.search-active .trust,
+body.search-active #faq,
+body.search-active footer {
+  display: none;
+}
+
+body.search-active .grid-section {
+  padding-top: 34px;
+}
+
 .results-row {
   display: flex;
   justify-content: space-between;
@@ -822,6 +875,12 @@ nav.main-nav a.active::after {
   font-size: 20px;
   font-weight: 600;
   margin: 0;
+}
+
+.dahab-subtitle {
+  margin: 34px 0 18px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .filter-clear {
